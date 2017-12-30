@@ -1,13 +1,14 @@
 """
 This script lets us explore the values in the Boston prices
 dataset . We will use this information to develop a machine learning
-model to be deployed in an iOS app. 
+model to be deployed in an iOS app.
 
 Author: Dr J Rogel
 
 Last modified: 20171230
 """
 
+import pandas as pd
 from sklearn import datasets
 
 boston = datasets.load_boston()
