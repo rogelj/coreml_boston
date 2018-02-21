@@ -29,6 +29,26 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func getPrediction() {
+        let selectedCrimeRow = inputPicker.selectedRow(inComponent: inputPredictor.crime.rawValue)
+        let crime = crimeData[selectedCrimeRow]
+
+        let selectedRoomRow = inputPicker.selectedRow(inComponent: inputPredictor.rooms.rawValue)
+        let rooms = roomData[selectedRoomRow]
+
+        let message = "The picked values are Crime: \(crime) and Rooms: \(rooms)"
+
+        let alert = UIAlertController(title: "Values Picked",
+                                      message: message,
+                                      preferredStyle: .alert)
+
+        let action = UIAlertAction(title: "OK", style: .default,
+                                   handler: nil)
+
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+
 
 }
 

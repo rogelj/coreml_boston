@@ -22,6 +22,9 @@
                                 <rect key="frame" x="118" y="429" width="138" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calculate Prediction"/>
+                                <connections>
+                                    <action selector="getPrediction" destination="BYZ-38-t0r" eventType="touchUpInside" id="CBT-Rf-LDu"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gla-8V-e56">
                                 <rect key="frame" x="0.0" y="224" width="375" height="162"/>
