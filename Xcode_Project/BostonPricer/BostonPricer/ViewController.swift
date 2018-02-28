@@ -7,11 +7,22 @@
 //
 
 import UIKit
+import CoreML
 
 class ViewController: UIViewController {
 
     let crimeData = Array(stride(from: 0.1, through: 0.3, by: 0.01))
     let roomData = Array(4...9)
+
+    let priceFormat: NumberFormatter = {
+        let formatting = NumberFormatter()
+        formatting.numberStyle = .currency
+        formatting.maximumFractionDigits = 2
+        formatting.locale = Locale(identifier: "en_US")
+        return formatting
+    }()
+
+    let model = PriceBoston()
 
     @IBOutlet weak var inputPicker: UIPickerView!
 
@@ -36,7 +47,17 @@ class ViewController: UIViewController {
         let selectedRoomRow = inputPicker.selectedRow(inComponent: inputPredictor.rooms.rawValue)
         let rooms = roomData[selectedRoomRow]
 
-        let message = "The picked values are Crime: \(crime) and Rooms: \(rooms)"
+        guard let priceBostonOutput = try? model.prediction(
+            crime:crime,
+            rooms: Double(rooms)
+            ) else {
+                fatalError("Unexpected runtime error.")
+        }
+
+        let priceText = priceFormat.string(from: NSNumber(value:
+            priceBostonOutput.price))
+
+        let message = "The predicted price (in $1,000s) is " + priceText!
 
         let alert = UIAlertController(title: "Values Picked",
                                       message: message,

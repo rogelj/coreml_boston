@@ -12,6 +12,7 @@
 		4614E73020029C8F00E1BAF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4614E72E20029C8F00E1BAF9 /* Main.storyboard */; };
 		4614E73220029C8F00E1BAF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4614E73120029C8F00E1BAF9 /* Assets.xcassets */; };
 		4614E73520029C8F00E1BAF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4614E73320029C8F00E1BAF9 /* LaunchScreen.storyboard */; };
+		462A3AB2203EB96F00FA79F9 /* PriceBoston.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 462A3AB1203EB96F00FA79F9 /* PriceBoston.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4614E73120029C8F00E1BAF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4614E73420029C8F00E1BAF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4614E73620029C8F00E1BAF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		462A3AB1203EB96F00FA79F9 /* PriceBoston.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PriceBoston.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		4614E72920029C8F00E1BAF9 /* BostonPricer */ = {
 			isa = PBXGroup;
 			children = (
+				462A3AB0203EB8C400FA79F9 /* Resources */,
 				4614E72A20029C8F00E1BAF9 /* AppDelegate.swift */,
 				4614E72C20029C8F00E1BAF9 /* ViewController.swift */,
 				4614E72E20029C8F00E1BAF9 /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				4614E73620029C8F00E1BAF9 /* Info.plist */,
 			);
 			path = BostonPricer;
+			sourceTree = "<group>";
+		};
+		462A3AB0203EB8C400FA79F9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				462A3AB1203EB96F00FA79F9 /* PriceBoston.mlmodel */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			files = (
 				4614E72D20029C8F00E1BAF9 /* ViewController.swift in Sources */,
 				4614E72B20029C8F00E1BAF9 /* AppDelegate.swift in Sources */,
+				462A3AB2203EB96F00FA79F9 /* PriceBoston.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
