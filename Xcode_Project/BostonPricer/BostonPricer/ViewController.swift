@@ -59,7 +59,7 @@ class ViewController: UIViewController {
 
         let message = "The predicted price (in $1,000s) is " + priceText!
 
-        let alert = UIAlertController(title: "Values Picked",
+        let alert = UIAlertController(title: "Prediction",
                                       message: message,
                                       preferredStyle: .alert)
 
