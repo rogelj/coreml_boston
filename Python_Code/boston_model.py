@@ -8,7 +8,7 @@ native app.
 
 Author: Dr J Rogel
 
-Last modified: 20180101
+Last modified: 20191009
 """
 
 import coremltools
@@ -58,6 +58,8 @@ def main():
         metrics.mean_squared_error(y_test, y_pred)))
     print("The root mean squared error is {0}.".format(
         np.sqrt(metrics.mean_squared_error(y_test, y_pred))))
+    print("The r-squared {0}.".format(
+        metrics.r2_score(y_test, y_pred)))
 
     print("Let us now convert this model into a Core ML object:")
 
@@ -67,8 +69,11 @@ def main():
                                             output_feature_names="price")
 
     # Save Core ML Model
-    coreml_model.save("PriceBoston.mlmodel")
-    print("Done!")
+    coreml_model.author = 'JRogel'
+    coreml_model.license = 'BSD'
+    coreml_model.short_description = 'Predicts the price of a house in the Boston area (1970s).'
+    coreml_model.save('PriceBoston.mlmodel')
+    print('Done!')
 
 
 if __name__ == '__main__':
