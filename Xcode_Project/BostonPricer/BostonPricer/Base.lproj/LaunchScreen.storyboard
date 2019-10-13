@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15508"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,38 +15,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Boston Pricer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mts-iz-oAL">
-                                <rect key="frame" x="132" y="183" width="150" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boston Pricer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mts-iz-oAL">
+                                <rect key="frame" x="77" y="165" width="260" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="zcW-nW-Gs1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Crime Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VM2-lc-Lgj">
-                                <rect key="frame" x="63" y="292" width="85" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JRogel_Jackalope" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DwA-ga-znf">
+                                <rect key="frame" x="81" y="292" width="252" height="282"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advanced Data Science and Analytics with Python" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLJ-dr-dsE">
+                                <rect key="frame" x="81" y="619" width="252" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="cBu-aC-r0h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No. Rooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOA-oI-YO0">
-                                <rect key="frame" x="280" y="292" width="84" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr J Rogel-Salazar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yA9-dE-dZ5">
+                                <rect key="frame" x="135.5" y="798" width="143" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="oxA-LL-Gkz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M1H-M6-feu">
-                                <rect key="frame" x="0.0" y="338" width="414" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihv-N8-Tep">
-                                <rect key="frame" x="110" y="635" width="195" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Calculate Prediction"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yA9-dE-dZ5" secondAttribute="bottom" constant="43" id="1id-fF-0Tn"/>
+                            <constraint firstItem="gLJ-dr-dsE" firstAttribute="centerX" secondItem="yA9-dE-dZ5" secondAttribute="centerX" id="56j-63-E3N"/>
+                            <constraint firstItem="DwA-ga-znf" firstAttribute="top" secondItem="Mts-iz-oAL" secondAttribute="bottom" constant="72" id="BxI-VW-eeC"/>
+                            <constraint firstItem="Mts-iz-oAL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="121" id="EIW-Jf-FLR"/>
+                            <constraint firstItem="DwA-ga-znf" firstAttribute="centerX" secondItem="gLJ-dr-dsE" secondAttribute="centerX" id="GXa-w1-ebs"/>
+                            <constraint firstItem="Mts-iz-oAL" firstAttribute="centerX" secondItem="DwA-ga-znf" secondAttribute="centerX" id="V9E-aD-2cZ"/>
+                            <constraint firstItem="Mts-iz-oAL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="Ve3-a1-SR8"/>
+                            <constraint firstItem="gLJ-dr-dsE" firstAttribute="top" secondItem="DwA-ga-znf" secondAttribute="bottom" constant="45" id="hfV-RF-8mS"/>
+                            <constraint firstItem="Mts-iz-oAL" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ndb-qx-FYG"/>
+                            <constraint firstItem="DwA-ga-znf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="81" id="p8r-Jw-rf7"/>
+                            <constraint firstItem="DwA-ga-znf" firstAttribute="leading" secondItem="gLJ-dr-dsE" secondAttribute="leading" id="qff-Ph-g1J"/>
+                            <constraint firstItem="yA9-dE-dZ5" firstAttribute="top" secondItem="gLJ-dr-dsE" secondAttribute="bottom" constant="89" id="uRJ-ML-cnd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -55,4 +69,7 @@
             <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="JRogel_Jackalope" width="1860" height="1880"/>
+    </resources>
 </document>
