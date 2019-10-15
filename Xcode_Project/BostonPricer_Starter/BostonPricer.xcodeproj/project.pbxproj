@@ -59,8 +59,8 @@
 				46262FD3234DCB68009340BE /* AppDelegate.swift */,
 				46262FD5234DCB68009340BE /* SceneDelegate.swift */,
 				46262FD7234DCB68009340BE /* ContentView.swift */,
-				46262FDE234DCB6A009340BE /* LaunchScreen.storyboard */,
 				46262FD9234DCB6A009340BE /* Assets.xcassets */,
+				46262FDE234DCB6A009340BE /* LaunchScreen.storyboard */,
 				46262FE1234DCB6A009340BE /* Info.plist */,
 				46262FDB234DCB6A009340BE /* Preview Content */,
 			);
