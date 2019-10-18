@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15508"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,32 +15,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boston Pricer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mts-iz-oAL">
-                                <rect key="frame" x="77" y="165" width="260" height="55"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JRogel_Jackalope" translatesAutoresizingMaskIntoConstraints="NO" id="BFT-4r-0cv">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="zcW-nW-Gs1"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="jmG-Ae-Dr4"/>
+                                    <constraint firstAttribute="height" secondItem="BFT-4r-0cv" secondAttribute="width" multiplier="1:1" id="t7x-8a-9Or"/>
                                 </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boston Pricer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hV-n6-lY2">
+                                <rect key="frame" x="109.66666666666667" y="257" width="194.66666666666663" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JRogel_Jackalope" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DwA-ga-znf">
-                                <rect key="frame" x="81" y="292" width="252" height="282"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advanced Data Science and Analytics with Python" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLJ-dr-dsE">
-                                <rect key="frame" x="81" y="619" width="252" height="90"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="cBu-aC-r0h"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="500" verticalCompressionResistancePriority="500" insetsLayoutMarginsFromSafeArea="NO" text="Advanced Data Science and Analytics with Python" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXf-pr-X4r">
+                                <rect key="frame" x="0.0" y="568" width="414" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr J Rogel-Salazar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yA9-dE-dZ5">
-                                <rect key="frame" x="135.5" y="798" width="143" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="oxA-LL-Gkz"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr J Rogel-Salazar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWu-re-CFa">
+                                <rect key="frame" x="135.66666666666666" y="608.33333333333337" width="142.99999999999997" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -48,25 +43,23 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yA9-dE-dZ5" secondAttribute="bottom" constant="43" id="1id-fF-0Tn"/>
-                            <constraint firstItem="gLJ-dr-dsE" firstAttribute="centerX" secondItem="yA9-dE-dZ5" secondAttribute="centerX" id="56j-63-E3N"/>
-                            <constraint firstItem="DwA-ga-znf" firstAttribute="top" secondItem="Mts-iz-oAL" secondAttribute="bottom" constant="72" id="BxI-VW-eeC"/>
-                            <constraint firstItem="Mts-iz-oAL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="121" id="EIW-Jf-FLR"/>
-                            <constraint firstItem="DwA-ga-znf" firstAttribute="centerX" secondItem="gLJ-dr-dsE" secondAttribute="centerX" id="GXa-w1-ebs"/>
-                            <constraint firstItem="Mts-iz-oAL" firstAttribute="centerX" secondItem="DwA-ga-znf" secondAttribute="centerX" id="V9E-aD-2cZ"/>
-                            <constraint firstItem="Mts-iz-oAL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="Ve3-a1-SR8"/>
-                            <constraint firstItem="gLJ-dr-dsE" firstAttribute="top" secondItem="DwA-ga-znf" secondAttribute="bottom" constant="45" id="hfV-RF-8mS"/>
-                            <constraint firstItem="Mts-iz-oAL" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ndb-qx-FYG"/>
-                            <constraint firstItem="DwA-ga-znf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="81" id="p8r-Jw-rf7"/>
-                            <constraint firstItem="DwA-ga-znf" firstAttribute="leading" secondItem="gLJ-dr-dsE" secondAttribute="leading" id="qff-Ph-g1J"/>
-                            <constraint firstItem="yA9-dE-dZ5" firstAttribute="top" secondItem="gLJ-dr-dsE" secondAttribute="bottom" constant="89" id="uRJ-ML-cnd"/>
+                            <constraint firstItem="HXf-pr-X4r" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="20" id="1th-dq-iLt"/>
+                            <constraint firstItem="BFT-4r-0cv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="5Rp-1e-aGQ"/>
+                            <constraint firstItem="HXf-pr-X4r" firstAttribute="centerX" secondItem="BFT-4r-0cv" secondAttribute="centerX" id="D1m-dx-Udo"/>
+                            <constraint firstItem="BFT-4r-0cv" firstAttribute="top" secondItem="6hV-n6-lY2" secondAttribute="bottom" constant="50" id="ISG-A8-2sM"/>
+                            <constraint firstItem="MWu-re-CFa" firstAttribute="top" secondItem="HXf-pr-X4r" secondAttribute="bottom" constant="20" id="Ihx-Pj-AHY"/>
+                            <constraint firstItem="HXf-pr-X4r" firstAttribute="top" secondItem="BFT-4r-0cv" secondAttribute="bottom" constant="20" id="U1k-bR-fGw"/>
+                            <constraint firstItem="BFT-4r-0cv" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="WmV-9Y-qzD"/>
+                            <constraint firstItem="MWu-re-CFa" firstAttribute="centerX" secondItem="HXf-pr-X4r" secondAttribute="centerX" id="gbd-OK-y39"/>
+                            <constraint firstItem="BFT-4r-0cv" firstAttribute="centerX" secondItem="6hV-n6-lY2" secondAttribute="centerX" id="h4p-j6-8UF"/>
+                            <constraint firstItem="HXf-pr-X4r" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="iYa-Z2-aSp"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="g9d-fg-wjS"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="48.799999999999997" y="374.66266866566718"/>
         </scene>
     </scenes>
     <resources>
