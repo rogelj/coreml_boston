@@ -10,7 +10,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        NavigationView {
+            VStack {
+                Text("Boston Pricer")
+                    .font(.largeTitle)
+                    .multilineTextAlignment(.center)
+                    .padding()
+
+                HStack {
+                    Text("Crime Rate").padding(.trailing, 40)
+                    Text("No. Rooms").padding(.leading, 40)
+                }
+
+                Spacer()
+
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Text("Get Prediction")
+                }
+
+                Spacer()
+            }
+        }
+    .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
