@@ -10,12 +10,12 @@ import SwiftUI
 
 struct ContentView: View {
 
-    let crimeData = Array(stride(from: 0.05, through: 3.65, by: 0.1))
+    let crimeData = Array(stride(from: 0.05, through: 3.7, by: 0.1))
     let roomData = Array(4...9)
 
     @State var popUpVisible: Bool = false
-    @State var pickerCrime = 0.05
-    @State var pickerRoom = 4
+    @State var pickerCrime = 0
+    @State var pickerRoom = 0
 
     var body: some View {
         NavigationView {
@@ -25,14 +25,16 @@ struct ContentView: View {
                     .multilineTextAlignment(.center)
 
                 VStack {
-                    Picker(selection: /*@START_MENU_TOKEN@*/.constant(1)/*@END_MENU_TOKEN@*/, label: Text("Crime")) {
-                        /*@START_MENU_TOKEN@*/Text("1").tag(1)/*@END_MENU_TOKEN@*/
-                        /*@START_MENU_TOKEN@*/Text("2").tag(2)/*@END_MENU_TOKEN@*/
+                    Picker(selection: $pickerCrime, label: Text("Crime")) {
+                        ForEach(0..<crimeData.count) { ix in
+                            Text("\(self.crimeData[ix], specifier: "%.2f")").tag(ix)
+                        }
                     }
                     .padding(.leading, 10)
-                    Picker(selection: /*@START_MENU_TOKEN@*/.constant(1)/*@END_MENU_TOKEN@*/, label: Text("No. Rooms")) {
-                        /*@START_MENU_TOKEN@*/Text("1").tag(1)/*@END_MENU_TOKEN@*/
-                        /*@START_MENU_TOKEN@*/Text("2").tag(2)/*@END_MENU_TOKEN@*/
+                    Picker(selection: $pickerRoom, label: Text("No. Rooms")) {
+                        ForEach(0..<roomData.count) { ix in
+                            Text("\(self.roomData[ix])").tag(ix)
+                        }
                     }
                     .padding(.leading, 10)
                 }
@@ -44,9 +46,9 @@ struct ContentView: View {
                 }
                 .alert(isPresented: self.$popUpVisible) {
                     Alert(title: Text("Prediction"),
-                        message: Text("Prediction will be shown here."),
+                        message: Text("The values picked are\n Crime Rate: \(crimeData[pickerCrime])\n Rooms: \(roomData[pickerRoom])"),
                         dismissButton: .default(Text("Cool!")))
-                }
+                }.padding()
 
                 Spacer()
             }
