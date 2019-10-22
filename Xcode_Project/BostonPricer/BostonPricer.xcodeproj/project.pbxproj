@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		460EB331235F443B00F423B2 /* PriceBoston.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 460EB330235F443B00F423B2 /* PriceBoston.mlmodel */; };
 		46262FD4234DCB68009340BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46262FD3234DCB68009340BE /* AppDelegate.swift */; };
 		46262FD6234DCB68009340BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46262FD5234DCB68009340BE /* SceneDelegate.swift */; };
 		46262FD8234DCB68009340BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46262FD7234DCB68009340BE /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		460EB330235F443B00F423B2 /* PriceBoston.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PriceBoston.mlmodel; sourceTree = "<group>"; };
 		46262FD0234DCB68009340BE /* BostonPricer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BostonPricer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46262FD3234DCB68009340BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46262FD5234DCB68009340BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,9 +39,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		460EB32F235F407400F423B2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				460EB330235F443B00F423B2 /* PriceBoston.mlmodel */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		46262FC7234DCB68009340BE = {
 			isa = PBXGroup;
 			children = (
+				460EB32F235F407400F423B2 /* Resources */,
 				46262FD2234DCB68009340BE /* BostonPricer */,
 				46262FD1234DCB68009340BE /* Products */,
 			);
@@ -149,6 +160,7 @@
 				46262FD4234DCB68009340BE /* AppDelegate.swift in Sources */,
 				46262FD6234DCB68009340BE /* SceneDelegate.swift in Sources */,
 				46262FD8234DCB68009340BE /* ContentView.swift in Sources */,
+				460EB331235F443B00F423B2 /* PriceBoston.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
