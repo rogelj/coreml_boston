@@ -7,8 +7,11 @@
 //
 
 import SwiftUI
+import CoreML
 
 struct ContentView: View {
+
+    let model = PriceBoston()
 
     let crimeData = Array(stride(from: 0.05, through: 3.7, by: 0.1))
     let roomData = Array(4...9)
@@ -45,16 +48,37 @@ struct ContentView: View {
                     Text("Get Prediction")
                 }
                 .alert(isPresented: self.$popUpVisible) {
-                    Alert(title: Text("Prediction"),
-                        message: Text("The values picked are\n Crime Rate: \(crimeData[pickerCrime])\n Rooms: \(roomData[pickerRoom])"),
-                        dismissButton: .default(Text("Cool!")))
+                    Alert(title: Text("Property Valuation"),
+                          message: Text(predictionMsg()),
+                        dismissButton: .default(Text("Cool!"))
+                    )
                 }.padding()
 
                 Spacer()
             }
         }
-    .navigationViewStyle(StackNavigationViewStyle())
+    //.navigationViewStyle(StackNavigationViewStyle())
     }
+
+    // Methods
+    // ========
+    func predictionMsg() -> String {
+        let crime = crimeData[pickerCrime]
+        let rooms = Double(roomData[pickerRoom])
+//        print(crime, rooms)
+
+        guard let PriceBoston = try? model.prediction(crime: crime, rooms: rooms) else {
+            fatalError("Unexpected runtime error.")
+        }
+
+        let price = String(format: "%.2f", PriceBoston.price*1000)
+//        print(price)
+
+        let Msg = "Your property is valued at\n $\(price)"
+
+        return Msg
+    }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
