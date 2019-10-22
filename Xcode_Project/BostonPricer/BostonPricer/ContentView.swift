@@ -50,7 +50,7 @@ struct ContentView: View {
                 .alert(isPresented: self.$popUpVisible) {
                     Alert(title: Text("Property Valuation"),
                           message: Text(predictionMsg()),
-                        dismissButton: .default(Text("Cool!"))
+                        dismissButton: .default(Text("OK"))
                     )
                 }.padding()
 
@@ -74,7 +74,7 @@ struct ContentView: View {
         let price = String(format: "%.2f", PriceBoston.price*1000)
 //        print(price)
 
-        let Msg = "Your property is valued at\n $\(price)"
+        let Msg = "Your property value is\n $\(price)"
 
         return Msg
     }
