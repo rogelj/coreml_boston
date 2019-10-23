@@ -28,18 +28,20 @@ struct ContentView: View {
                     .multilineTextAlignment(.center)
 
                 VStack {
-                    Picker(selection: $pickerCrime, label: Text("Crime")) {
+                    Picker(selection: $pickerCrime, label: Text("Crime")
+                        .font(.body)
+
+                        ) {
                         ForEach(0..<crimeData.count) { ix in
                             Text("\(self.crimeData[ix], specifier: "%.2f")").tag(ix)
                         }
                     }
-                    .padding(.leading, 10)
-                    Picker(selection: $pickerRoom, label: Text("No. Rooms")) {
+
+                    Picker(selection: $pickerRoom, label: Text("No. Rooms").font(.body)) {
                         ForEach(0..<roomData.count) { ix in
                             Text("\(self.roomData[ix])").tag(ix)
                         }
                     }
-                    .padding(.leading, 10)
                 }
 
                 Button(action: {
@@ -57,7 +59,7 @@ struct ContentView: View {
                 Spacer()
             }
         }
-    //.navigationViewStyle(StackNavigationViewStyle())
+    .navigationViewStyle(StackNavigationViewStyle())
     }
 
     // Methods
