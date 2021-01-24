@@ -26,18 +26,24 @@ struct ContentView: View {
                 Text("Boston Pricer")
                     .font(.largeTitle)
                     .multilineTextAlignment(.center)
+                Spacer()
+                Spacer()
 
                 VStack {
-                    Picker(selection: $pickerCrime, label: Text("Crime")
-                        .font(.body)
-
+                    Text("Crime").font(.body)
+                    Picker(selection: $pickerCrime, label: Text("")
                         ) {
                         ForEach(0..<crimeData.count) { ix in
                             Text("\(self.crimeData[ix], specifier: "%.2f")").tag(ix)
                         }
                     }
 
-                    Picker(selection: $pickerRoom, label: Text("No. Rooms").font(.body)) {
+                }
+
+                VStack {
+                    Text("No. of Rooms").font(.body)
+                    Picker(selection: $pickerRoom, label: Text(""))
+                    {
                         ForEach(0..<roomData.count) { ix in
                             Text("\(self.roomData[ix])").tag(ix)
                         }
@@ -83,8 +89,18 @@ struct ContentView: View {
 
 }
 
-struct ContentView_Previews: PreviewProvider {
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
+
+#if DEBUG
+struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()//.environment(\.colorScheme, .dark)
+        }
     }
 }
+#endif
