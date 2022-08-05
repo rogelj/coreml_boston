@@ -11,7 +11,16 @@ import CoreML
 
 struct ContentView: View {
 
-    let model = PriceBoston()
+//    let model = PriceBoston()
+    let model: PriceBoston = {
+        do {
+            let config = MLModelConfiguration()
+            return try PriceBoston(configuration: config)
+        } catch {
+            print(error)
+            fatalError("Couldn't create PriceBoston")
+        }
+    }()
 
     let crimeData = Array(stride(from: 0.05, through: 3.7, by: 0.1))
     let roomData = Array(4...9)
@@ -33,7 +42,7 @@ struct ContentView: View {
                     Text("Crime").font(.body)
                     Picker(selection: $pickerCrime, label: Text("")
                         ) {
-                        ForEach(0..<crimeData.count) { ix in
+                        ForEach(0..<crimeData.count, id: \.self) { ix in
                             Text("\(self.crimeData[ix], specifier: "%.2f")").tag(ix)
                         }
                     }
@@ -44,7 +53,7 @@ struct ContentView: View {
                     Text("No. of Rooms").font(.body)
                     Picker(selection: $pickerRoom, label: Text(""))
                     {
-                        ForEach(0..<roomData.count) { ix in
+                        ForEach(0..<roomData.count, id: \.self) { ix in
                             Text("\(self.roomData[ix])").tag(ix)
                         }
                     }
@@ -79,7 +88,7 @@ struct ContentView: View {
             fatalError("Unexpected runtime error.")
         }
 
-        let price = String(format: "%.2f", PriceBoston.price*1000)
+        let price = String(format: "%.2f", locale: Locale.current, Double(PriceBoston.price*1000))
 //        print(price)
 
         let Msg = "Your property value is\n $\(price)"
