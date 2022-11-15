@@ -1,5 +1,14 @@
 # CoreML - Boston Pricer
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+![Platforms](https://img.shields.io/badge/platform-iOS-lightgrey.svg)
+[![Swift Version](https://img.shields.io/badge/Swift-5.7-orange)](https://developer.apple.com/swift)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Twitter](https://img.shields.io/badge/twitter-quantum__tunnel-blue)](http://twitter.com/quantum_tunnel)
+[![BioSite](https://img.shields.io/badge/BioSite-jrogel-blue)](https://bio.site/jrogel)
+[![Website](https://img.shields.io/badge/web-jrogel-black)](https://jrogel.com)
+[![Website](https://img.shields.io/badge/web-RogueLoop-black)](https://rogueloop.jrogel.com)
+
 This repository started as an "open notebook" of my experimentation and learning with Apple technology. It is basically a way to demonstrate the use of  Core ML, a framework that makes running various machine learning and statistical models on macOS and iOS natively supported. The idea is that the framework helps data scientists and developers bridge the gap between them by integrating trained models into our apps.
 
 The original code was showcased as a series of posts in my website here: <http://jrogel.com/machine-learning-apple/>
